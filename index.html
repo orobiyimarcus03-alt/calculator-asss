@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h2>Calculator</h2>
+
+        <input type="Number" id="firstNumber" placeholder="First Number">
+        <input type="Number" id="secondNumber" placeholder="Second Number">
+
+
+        <div class="buttons">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('/')">/</button>
+        </div>
+
+        <input type="text" id="result" readonly>
+
+    </div>
+
+
+</body>
+
+</html>
+
+
+
+
+<script>
+    function calculate(operator) {
+
+        let first = Number(document.getElementById("firstNumber").value);
+        let second = Number(document.getElementById("secondNumber").value);
+
+
+        if (operator === "+") {
+            
+            result = first + second;
+
+            // console.log(result);
+        } else if (operator === "-") {
+            result = first - second;
+
+        } else if (operator === "*") {
+            result = first * second;
+
+            // console.log(result);
+        } else if (operator === "/") {
+            result = first / second;
+
+            console.log(result);
+        }else{
+            alert("input number")
+        }
+
+        document.getElementById("result").value = result;
+
+
+    }
+
+</script>
